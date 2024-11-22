@@ -1,0 +1,104 @@
+.calculator {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: right;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: right;
+}
+
+.result {
+  font-size: 1.5rem;
+  color: gray;
+  padding-right: 10px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.25rem;
+  background-color: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+.clear {
+  background-color: black;
+  color: white;
+}
+
+.clear:hover {
+  background-color: gray;
+  color: black;
+}
+
+.operator {
+  color: rgba(255, 149, 0, 0.87);
+}
+
+.operator:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 50%;
+  transition: 0.1s;
+}
+
+.equal {
+  border-radius: 50%;
+  background: rgba(255, 149, 0, 0.77);
+  color: #fff;
+}
+
+.equal:hover {
+  background: rgba(255, 149, 0, 1);
+  color: black;
+}
+
+@media (max-width: 600px) {
+  button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .keypad {
+    gap: 5px;
+  }
+
+  input[type="text"] {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .result {
+    font-size: 1.2rem;
+  }
+}
